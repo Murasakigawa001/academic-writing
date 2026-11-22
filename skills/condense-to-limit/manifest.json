@@ -1,0 +1,70 @@
+{
+  "name": "condense-to-limit",
+  "version": "1.1.0",
+  "summary": "把已成型的长稿压缩到字数/词数/页数上限，并把被删内容迁入附录或补充材料。",
+  "language": [
+    "en",
+    "zh"
+  ],
+  "entrypoint": "SKILL.md",
+  "requires": {
+    "python": ">=3.9",
+    "packages": [
+      "python-docx>=1.1.0"
+    ],
+    "optional_cli": [
+      "soffice",
+      "pdfinfo"
+    ]
+  },
+  "triggers": [
+    "压缩到 N 字/词/页以内",
+    "超出篇幅怎么删",
+    "删掉的内容放附录/附件/补充材料",
+    "精简但不丢内容",
+    "缩到限额同时保留全部内容"
+  ],
+  "not_for": [
+    "从零撰写（ima-report）",
+    "纯翻译或改文风",
+    "单纯格式转换（ima-doc/ima-pdf）"
+  ],
+  "files": [
+    {
+      "path": "INSTALL.md",
+      "bytes": 3390,
+      "sha256": "58445b912f4d72bb"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 9652,
+      "sha256": "156058af65fdfc36"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 19,
+      "sha256": "dfea9cd01250f46c"
+    },
+    {
+      "path": "references/appendix-design.md",
+      "bytes": 3627,
+      "sha256": "38180c8908625bb8"
+    },
+    {
+      "path": "references/docx-surgery.md",
+      "bytes": 4055,
+      "sha256": "375ca0fe65383dce"
+    },
+    {
+      "path": "references/style-checklist.md",
+      "bytes": 5907,
+      "sha256": "aa69de1b48422178"
+    },
+    {
+      "path": "scripts/verify_condensed.py",
+      "bytes": 14034,
+      "sha256": "0aa48355ef5f7319"
+    }
+  ],
+  "notes": "限额由本次任务要求给定（用户/载体/折算），技能与脚本均不预设数值；新增 --requirement 记录限额来源。"
+}
